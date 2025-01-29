@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descarga de Libreta de Notas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            text-align: center;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .login-box {
+            background: #f0e9d2;
+            border: 2px solid #b22222;
+            padding: 20px;
+            width: 300px;
+            margin: auto;
+            border-radius: 8px;
+        }
+        .login-box input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .login-box button {
+            background-color: #b22222;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .login-box button:hover {
+            background-color: #8b1a1a;
+        }
+    </style>
+    <script>
+        function validarCredenciales() {
+            var usuario = document.getElementById("usuario").value;
+            var clave = document.getElementById("clave").value;
+            
+            if (usuario === "20180367" && clave === "77693623") {
+                alert("Acceso concedido. Descargando archivo...");
+                window.location.href = "notas.pdf"; // Reemplaza con el enlace real del archivo
+            } else {
+                alert("Usuario o clave incorrectos");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2 style="background: #b22222; color: white; padding: 10px;">Descarga de Libreta de Notas</h2>
+        <div class="login-box">
+            <label for="usuario">Usuario:</label>
+            <input type="text" id="usuario" placeholder="Ingrese su usuario">
+            <label for="clave">Clave:</label>
+            <input type="password" id="clave" placeholder="Ingrese su clave">
+            <button onclick="validarCredenciales()">Continuar</button>
+        </div>
+    </div>
+</body>
+</html>
